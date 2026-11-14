@@ -215,7 +215,7 @@ export function HomePage() {
 
       <Gallery />
 
-      <section className="px-5 pb-24 md:px-10 xl:px-16">
+      <section className="px-5 pb-4 md:pb-24 md:px-10 xl:px-16">
         <Reveal className="mx-auto grid max-w-[1280px] gap-8 lg:grid-cols-[.8fr_1.6fr] lg:items-center">
           <div>
             <span className="rounded-full bg-[#ece5d8] px-4 py-2 text-[10px] font-semibold uppercase tracking-[.15em] text-[#53634e]">
