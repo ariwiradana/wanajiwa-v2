@@ -1,7 +1,11 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
-import type { ReactNode } from "react";
+import { motion, MotionProps, useReducedMotion } from "framer-motion";
+import type { ComponentType, HTMLAttributes, ReactNode } from "react";
+
+const MotionDiv = motion.div as ComponentType<
+  HTMLAttributes<HTMLDivElement> & MotionProps
+>;
 
 type RevealProps = {
   children: ReactNode;
@@ -12,14 +16,14 @@ type RevealProps = {
 
 export function Reveal({
   children,
-  className = "",
+  className,
   delay = 0,
   y = 28,
 }: RevealProps) {
   const reduceMotion = useReducedMotion();
 
   return (
-    <motion.div
+    <MotionDiv
       className={className}
       initial={reduceMotion ? false : { opacity: 0, y, filter: "blur(6px)" }}
       whileInView={
@@ -33,7 +37,7 @@ export function Reveal({
       }}
     >
       {children}
-    </motion.div>
+    </MotionDiv>
   );
 }
 
@@ -47,7 +51,7 @@ export function RevealGroup({
   const reduceMotion = useReducedMotion();
 
   return (
-    <motion.div
+    <MotionDiv
       className={className}
       initial={reduceMotion ? false : "hidden"}
       whileInView={reduceMotion ? undefined : "visible"}
@@ -60,7 +64,7 @@ export function RevealGroup({
       }}
     >
       {children}
-    </motion.div>
+    </MotionDiv>
   );
 }
 
@@ -74,7 +78,7 @@ export function RevealItem({
   const reduceMotion = useReducedMotion();
 
   return (
-    <motion.div
+    <MotionDiv
       className={className}
       variants={{
         hidden: reduceMotion
@@ -89,6 +93,6 @@ export function RevealItem({
       }}
     >
       {children}
-    </motion.div>
+    </MotionDiv>
   );
 }

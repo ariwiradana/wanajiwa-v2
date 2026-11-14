@@ -57,26 +57,7 @@ const iconMap: Record<string, React.ElementType> = {
   wardrobe: BedDouble,
   utensils: Utensils,
 };
-const reviews = [
-  {
-    quote:
-      "It was great staying at the villa. It is beautiful and peaceful, and the team was very helpful.",
-    name: "Ankur",
-    place: "Guest review",
-  },
-  {
-    quote:
-      "Beautiful place in a beautiful area. Very clean, hospitality 10/10. Definitely will come back.",
-    name: "Farah",
-    place: "Guest review",
-  },
-  {
-    quote:
-      "Very peaceful and quiet. It was lovely, and the hospitality made our stay special.",
-    name: "Babette",
-    place: "Guest review",
-  },
-];
+
 export function HomePage() {
   return (
     <main>

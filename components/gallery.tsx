@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 // @ts-expect-error fslightbox-react does not provide TypeScript declarations.
 import FsLightbox from "fslightbox-react";
-import { Autoplay, EffectFade } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";

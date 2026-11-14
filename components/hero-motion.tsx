@@ -1,13 +1,18 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import type { ReactNode } from "react";
+import type { MotionProps } from "framer-motion";
+import type { ComponentType, HTMLAttributes, ReactNode } from "react";
+
+const MotionDiv = motion.div as ComponentType<
+  HTMLAttributes<HTMLDivElement> & MotionProps
+>;
 
 export function HeroImageMotion({ children }: { children: ReactNode }) {
   const reduceMotion = useReducedMotion();
 
   return (
-    <motion.div
+    <MotionDiv
       className="absolute inset-0"
       initial={reduceMotion ? false : { scale: 1.16, filter: "blur(5px)" }}
       animate={reduceMotion ? undefined : { scale: 1, filter: "blur(0px)" }}
@@ -17,7 +22,7 @@ export function HeroImageMotion({ children }: { children: ReactNode }) {
       }}
     >
       {children}
-    </motion.div>
+    </MotionDiv>
   );
 }
 
@@ -31,7 +36,7 @@ export function HeroTextMotion({
   const reduceMotion = useReducedMotion();
 
   return (
-    <motion.div
+    <MotionDiv
       className={className}
       initial={
         reduceMotion
@@ -50,7 +55,7 @@ export function HeroTextMotion({
       }}
     >
       {children}
-    </motion.div>
+    </MotionDiv>
   );
 }
 
@@ -64,7 +69,7 @@ export function HeroCardMotion({
   const reduceMotion = useReducedMotion();
 
   return (
-    <motion.div
+    <MotionDiv
       className={className}
       initial={
         reduceMotion
@@ -83,6 +88,6 @@ export function HeroCardMotion({
       }}
     >
       {children}
-    </motion.div>
+    </MotionDiv>
   );
 }
