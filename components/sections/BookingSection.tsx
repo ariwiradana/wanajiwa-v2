@@ -1,11 +1,12 @@
 import { ArrowUpRight } from "lucide-react";
-import { bookingChannels } from "../../data/site";
+import { bookingChannels, SectionLabel } from "../../data/site";
 
 export default function BookingSection() {
   return (
     <>
       <section id="ota" className="booking section wrap">
         <div className="sectionHeading centered">
+          <SectionLabel>BOOK YOUR STAY</SectionLabel>
           <h2>
             Choose how to
             <br />

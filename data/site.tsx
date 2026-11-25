@@ -54,7 +54,6 @@ export const photos = {
 };
 export const amenities = [
   { icon: Waves, title: "Private Pool", desc: "Exclusive swimming pool." },
-  { icon: Trees, title: "Terrace", desc: "Outdoor space to relax." },
   {
     icon: Trees,
     title: "Ricefield View",
